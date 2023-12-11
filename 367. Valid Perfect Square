@@ -1,0 +1,13 @@
+class Solution {
+public:
+    bool isPerfectSquare(int num) {
+        bool ans=false;
+        if(num==1) return true;
+      int k=sqrt(num);
+      if(k*k==num){
+          ans=true;
+      }
+      return ans;
+        
+    }
+};
