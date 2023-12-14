@@ -1,0 +1,41 @@
+//c++
+
+// 1st Approach
+
+
+class Solution {
+public:
+    void rotate(vector<vector<int>>& matrix) {
+        for(int i=0;i<matrix.size();i++){
+            for(int j=0;j<=i;j++){
+                swap(matrix[i][j],matrix[j][i]);
+            }
+        }
+        for(int i=0;i<matrix.size();i++){
+            reverse(matrix[i].begin(),matrix[i].end());
+        }
+    }
+};
+
+
+
+// 2nd Approach
+
+
+class Solution {
+public:
+    void rotate(vector<vector<int>>& matrix) {
+        vector<vector<int>>vec;
+            for(int j=0;j<matrix.size();j++){
+            vector<int>arr;
+           
+                for(int i=matrix.size()-1;i>=0;i--){
+                arr.push_back(matrix[i][j]);
+            }
+            vec.push_back(arr);
+        }
+        matrix.clear();
+        matrix=vec;
+
+    }
+};
