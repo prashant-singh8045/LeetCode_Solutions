@@ -1,0 +1,16 @@
+//c++
+
+class Solution {
+public:
+    int countTestedDevices(vector<int>& bp) {
+       //return max(batteryPercentages.begin(),batteryPercentages.end());
+       int n=bp.size();
+       int count=0;
+       for(int i=0;i<n;i++){
+           if((bp[i]-count)>0){
+               count++;
+           }
+         }
+         return count;
+     }
+};
